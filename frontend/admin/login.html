@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="style/admin-login.css" />
+</head>
+<body>
+
+  <!-- ─── SITE HEADER (NEW) ─────────────────────────────────── -->
+  <div class="site-header">
+    <img
+      class="site-logo"
+      src="./images/iith-logo-removebg-preview.png"
+      alt="IIT Hyderabad Logo"
+    />
+    <div class="header-text">
+      <span class="institute-name">Indian Institute of Technology Hyderabad</span>
+      <div class="separator"></div>
+      <span class="app-title">Mess Registration</span>
+    </div>
+  </div>
+
+  <!-- ─── ORIGINAL LOGIN BOX (UNCHANGED) ─────────────────────── -->
+  <div class="login-page">
+    <div class="login-container">
+      <!-- this old logo will be hidden by CSS -->
+      <div class="logo">
+        <img
+          src="./images/iith-logo-removebg-preview.png"
+          alt="IIT Hyderabad Logo"
+        />
+      </div>
+
+      <h2>Admin Login</h2>
+      <form id="admin-login-form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter admin username"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter password"
+            required
+          />
+        </div>
+        <button type="submit">Log In</button>
+        <p id="error-msg" class="error"></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("admin-login-form").addEventListener("submit", function (e) {
+      e.preventDefault(); // prevent real form submission
+      // you can optionally add username/password checks here later
+      window.location.href = "dashboard.html"; // redirect to dashboard
+    });
+  </script>
+  
+</body>
+</html>

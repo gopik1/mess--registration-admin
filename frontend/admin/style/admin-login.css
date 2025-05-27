@@ -1,0 +1,122 @@
+/* admin-login.css */
+
+/* ─── Global ───────────────────────────────────────────────────────── */
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+  }
+  
+  /* ─── LOGIN BOX STYLES ───────────────────────────────────────────── */
+  .login-container {
+    background: #fff;
+    padding: 2rem;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .login-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #444;
+  }
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+  }
+  .form-group input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccd0d5;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  button {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #1877f2;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s;
+  }
+  button:hover {
+    background-color: #155db2;
+  }
+  .error {
+    color: #d93025;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 1rem;
+    display: none;
+  }
+  
+  /* ─── HIDE the old in-card logo ─────────────────────────────────── */
+  .login-container .logo {
+    display: none;
+  }
+  
+  /* ─── LOGIN PAGE CENTERING (modified) ──────────────────────────── */
+  .login-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;    /* top-align under header */
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding-top: 150px;           /* give space for header */
+  }
+  
+  /* ─── SITE HEADER (NEW) ────────────────────────────────────────── */
+  .site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    z-index: 10;
+  }
+  .site-logo {
+    width: 48px;     /* smaller size */
+    height: auto;
+    margin-right: 1rem;
+  }
+  .header-text {
+    display: flex;
+    align-items: center;
+  }
+  .institute-name {
+    font-size: 0.95rem;
+    color: #333;
+    white-space: nowrap;
+  }
+  .separator {
+    width: 1px;
+    height: 1.2rem;
+    background-color: #ccc;
+    margin: 0 1rem;
+  }
+  .app-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #222;
+  }
+  
+  /* ─── (optional) other dashboard/table styles you already had… ──── */
+  /* … leave them below if you need the admin-dashboard pages, too. */
+  

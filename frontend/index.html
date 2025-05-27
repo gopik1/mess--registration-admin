@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Login</title>
+    <link rel="stylesheet" href="./student/styles/login-styles.css" />
+    <link
+      rel="shortcut icon"
+      href="student/images/iith-logo-og.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <!-- app-header -->
+
+    <div class="app-header">
+      <a href="https://www.iith.ac.in/">
+        <div class="college-container">
+          <img src="./student/images/iith-logo-removebg-preview.png" alt="" />
+
+          <p id="college-name">
+            Indian Institute<br />of Technology<br />Hyderabad
+          </p>
+        </div>
+      </a>
+
+      <div class="vertical-rule"></div>
+      <p id="app-header">Mess Registration</p>
+
+      <div class="mess-photo">
+        <img src="./student/images/mess-photo-3.png" alt="" />
+      </div>
+    </div>
+
+    <!-- app-header -->
+
+    <div class="student-auth-container">
+      <div class="header-container">
+        <h2>Student Login</h2>
+      </div>
+      <div class="form-container">
+        <form id="student-login-form">
+          <input
+            type="email"
+            id="email"
+            placeholder="Email (@iith.ac.in)"
+            required
+          />
+
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+
+          <button type="submit">Login</button>
+        </form>
+      </div>
+      <div class="signup-container">Create Account</div>
+    </div>
+
+    <!-- javascript -->
+    <script src="./script/login-backend.js"></script>
+  </body>
+</html>

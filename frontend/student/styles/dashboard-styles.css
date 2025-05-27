@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Badeen+Display&family=Bebas+Neue&family=Chilanka&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200..900&family=Love+Ya+Like+A+Sister&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+CO+Guides&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Ubuntu";
+  font-weight: 500;
+  user-select: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  /* background-color: rgb(240, 240, 240); */
+  background-color: white;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* gap: 10px; */
+}
+
+/* ! --- app-header --- !*/
+
+.app-header {
+  position: absolute;
+  top: 0px;
+  /* background-color: antiquewhite; */
+  height: 100px;
+  width: 100%;
+  font-size: 30px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 15px;
+  /* border: 1px solid; */
+}
+
+.vertical-rule {
+  height: 80px;
+  width: 2px;
+  /* border: 1px solid; */
+  background-color: black;
+}
+
+.college-container {
+  position: relative;
+  /* border: 1px solid; */
+  height: 90px;
+  width: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: end;
+}
+
+.app-header a:link {
+  color: black;
+  text-decoration: none;
+}
+
+.app-header a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.app-header a .college-container img {
+  height: 80px;
+  width: 80px;
+  /* border: 1px solid; */
+  position: relative;
+  bottom: -5px;
+}
+
+.app-header a .college-container #college-name {
+  height: 80px;
+  width: 120px;
+  /* border: 1px solid; */
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-header #college-name .app-header #app-header {
+  height: 50px;
+  width: auto;
+  font-size: 25px;
+  /* font-weight: 400; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mess-photo {
+  height: 90px;
+  width: 730px;
+  /* border: 1px solid; */
+  overflow: hidden;
+  position: absolute;
+  right: 20px;
+}
+
+.mess-photo img {
+  height: 100px;
+  width: 750px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ! --- app-header --- !*/
+
+.dashboard-container {
+  /* border: 1px solid; */
+  height: 500px;
+  width: 100vw;
+  position: absolute;
+  top: 110px;
+  /* padding: 20px; */
+  box-sizing: border-box;
+}
+
+.dashboard-container div {
+  border-radius: 20px;
+}
+
+.profile-container {
+  height: 300px;
+  width: 44%;
+  /* border: 1px solid black; */
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  color: #f07400;
+  /* background-color: #f07400; */
+}
+
+.profile-container .photo {
+  height: auto;
+  width: 150px;
+  /* border: 1px solid black; */
+  /* border-radius: 0; */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  /* object-fit: fill; */
+  overflow: hidden;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.profile-container .photo img {
+  width: 100%;
+  height: auto;
+  /* border: 1px solid; */
+}
+
+.button {
+  /* border: 1px solid blue; */
+  height: 100px;
+  width: 45%;
+  position: absolute;
+  right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  color: white;
+}
+
+.profile-container .name-container,
+.email-container,
+.status-container {
+  /* border: 1px solid; */
+  position: absolute;
+  right: 20px;
+  left: 190px;
+  top: 20px;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 15px;
+  box-sizing: border-box;
+  /* gap: 5px; */
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+.profile-container .email-container {
+  /* border: 1px solid; */
+  top: 110px;
+}
+.profile-container .status-container {
+  /* border: 1px solid; */
+  position: absolute;
+  top: 200px;
+  right: 20px;
+  left: 20px;
+  width: auto;
+  bottom: 20px;
+}
+
+.label {
+  /* font-weight: 300; */
+  font-size: 13px;
+  color: black;
+}
+
+.register-button {
+  top: 60px;
+  background-color: #f07400;
+}
+
+.register-button:hover {
+  background-color: #d66700;
+}
+
+#register-button:link {
+  color: white;
+  text-decoration: none;
+}
+
+#register-button:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.unregister-button {
+  top: 180px;
+  background-color: #f07400;
+}
+
+.unregister-button:hover {
+  background-color: #d66700;
+}
+
+#unregister-button:link {
+  color: white;
+  text-decoration: none;
+}
+
+#unregister-button:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.history-container {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translate(-50%);
+  /* border: 1px solid; */
+  height: 50px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: #f07400;
+}
+
+.history-container:hover {
+  background-color: #fafafa;
+}
+
+#history:link {
+  color: #f07400;
+  text-decoration: none;
+}
+
+#history:visited {
+  color: #f07400;
+  text-decoration: none;
+}
+
+.logout {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  height: 50px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  color: #f07400;
+}
+
+.logout:hover {
+  background-color: #fafafa;
+}
+
+#logout:link {
+  color: #f07400;
+  text-decoration: none;
+}
+
+#logout:visited {
+  color: #f07400;
+  text-decoration: none;
+}

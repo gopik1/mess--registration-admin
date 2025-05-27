@@ -1,0 +1,125 @@
+/* admin.css */
+
+/* ─── GLOBAL ───────────────────────────────────────── */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+  }
+  
+  /* ─── DASHBOARD HEADER ───────────────────────────────── */
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .dashboard-header h1 {
+    margin: 0;
+    font-size: 1.7rem;
+    color: #222;
+  }
+  
+  /* ─── CONTROLS ─────────────────────────────────────── */
+  .controls {
+    display: flex;
+    gap: 0.75rem;
+  }
+  .controls button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #f07400;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .controls button:hover {
+    background-color: #155db2;
+  }
+  
+  /* ─── MAIN LAYOUT ──────────────────────────────────── */
+  .dashboard-main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .registrations-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: #222;
+  }
+  
+  /* ─── TABLE STYLING ────────────────────────────────── */
+  .table-container {
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+  
+  #registrations-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+  }
+  
+  #registrations-table thead {
+    background-color: #1877f2;
+    color: #fff;
+  }
+  
+  #registrations-table th,
+  #registrations-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  #registrations-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+  }
+  
+  /* ─── “NO DATA” MESSAGE ───────────────────────────── */
+  .no-data {
+    display: none;  /* initial state; your script can toggle this */
+    text-align: center;
+    color: #666;
+    padding: 2rem;
+    font-size: 1rem;
+  }
+  /* ─── HEADER IMAGE AND TITLE ─────────────────────────── */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iith-logo {
+  height: 60px;
+  width: auto;
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #222;
+}
+
+.sub-title {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* ─── THICKER HEADER ─────────────────────────────────── */
+.dashboard-header {
+  padding: 1.5rem 2rem; /* increased vertical padding */
+}

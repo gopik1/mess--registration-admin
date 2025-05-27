@@ -1,0 +1,60 @@
+<!-- frontend/admin/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+
+  <!-- dashboard styles -->
+  <link rel="stylesheet" href="style/admin-dashboard.css" />
+</head>
+<body>
+  <header class="dashboard-header">
+    <div class="header-left">
+      <img src="./images/iith-logo-removebg-preview.png"
+           alt="IITH Logo"
+           class="iith-logo" />
+      <div class="header-title">
+        <h1>Mess Registration Dashboard</h1>
+        <span class="sub-title">Indian Institute of Technology Hyderabad</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="download-report" type="button">Download CSV</button>
+      <button id="change-plans"    type="button">Change plans</button>
+      <button id="logout-btn"      type="button">Logout</button>
+    </div>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="registrations-section">
+      <h2>Registered Students</h2>
+
+      <div class="table-container">
+        <table id="registrations-table">
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Mess</th>
+              <th>Mess Plan</th>
+              <th>Registered On</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- admin.js will inject rows here -->
+          </tbody>
+        </table>
+      </div>
+
+      <p id="no-data" class="no-data" style="display:none;">
+        No registrations found.
+      </p>
+    </section>
+  </main>
+
+  <!-- admin logic -->
+  <script src="./script/admin.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!-- frontend/admin/change-plans.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Change Student Plans</title>
+
+  <!-- reuse the same stylesheet as the dashboard -->
+  <link rel="stylesheet" href="style/admin-dashboard.css" />
+  <style>
+    /* page-specific tweaks */
+    .actions-cell button {
+      padding: 0.4rem 0.8rem;
+      border: none;
+      border-radius: 4px;
+      background-color: #0a7cff;
+      color: #fff;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .actions-cell button:hover { opacity: 0.85; }
+    .actions-cell button:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Re-use the header layout -->
+  <header class="dashboard-header">
+    <div class="header-left">
+      <img src="./images/iith-logo-removebg-preview.png"
+           alt="IITH Logo"
+           class="iith-logo" />
+      <div class="header-title">
+        <h1>Change Mess / Plan</h1>
+        <span class="sub-title">Indian Institute of Technology Hyderabad</span>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="back-btn" type="button">← Back to dashboard</button>
+    </div>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="registrations-section">
+      <h2>Change Plans</h2>
+
+      <div class="table-container">
+        <table id="plans-table">
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Mess</th>
+              <th>Plan</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- change-plans.js will inject rows here -->
+          </tbody>
+        </table>
+      </div>
+
+      <p id="no-data" class="no-data" style="display:none;">
+        No registrations found.
+      </p>
+    </section>
+  </main>
+
+  <!-- page logic (we'll create this next) -->
+  <script src="./script/change-plans.js" defer></script>
+</body>
+</html>
