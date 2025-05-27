@@ -1,10 +1,12 @@
 /* admin.js  –  single authoritative version */
+<script src="../config.js"></script>
+
 console.log("admin.js loaded");
 
-const API_BASE =
-  window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-    ? "http://127.0.0.1:5050"    // 👈 exact host + port where Flask runs
-    : "https://mess-registration-api.fly.dev";   // <- prod URL
+//const API_BASE =
+  //window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+    //? "http://127.0.0.1:5050"    // 👈 exact host + port where Flask runs
+    //: "https://mess-registration-api.fly.dev";   // <- prod URL
 
 const tbody    = document.querySelector("#registrations-table tbody");
 const noDataEl = document.getElementById("no-data");

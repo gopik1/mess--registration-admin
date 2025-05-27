@@ -3,10 +3,12 @@
  * 2. Lets an admin switch Mess / Plan per student
  * 3. Saves the change back to Flask (updates mess_data.json)
  * ---------------------------------------------------------- */
+<script src="../config.js"></script>
+
 
 console.log("change-plans.js loaded");
 
-const API_BASE = "http://127.0.0.1:5050";     // dev; replace with your prod URL
+//const API_BASE = "http://127.0.0.1:5050";     // dev; replace with your prod URL
 
 const tbody    = document.querySelector("#plans-table tbody");
 const noDataEl = document.getElementById("no-data");
