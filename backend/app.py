@@ -20,12 +20,12 @@ CORS(
     app,
     supports_credentials=True,
     origins=[
-        "https://mess-registration-admin.vercel.app",   # ← NEW
+        "https://mess-registration-admin.vercel.app",
+        "https://mess-registration-admin-git-main-gopik1s-projects.vercel.app",
         "http://127.0.0.1:5500",
-        "http://localhost:5500"
+        "http://localhost:5500",
     ]
 )
-
 # ─── Files ───────────────────────────────────────────────────────────
 BASE_DIR        = os.path.dirname(os.path.abspath(__file__))
 MESS_DATA_FILE  = os.path.join(BASE_DIR, "mess_data.json")
