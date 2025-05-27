@@ -1,66 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Student Login</title>
-    <link rel="stylesheet" href="./student/styles/login-styles.css" />
-    <link
-      rel="shortcut icon"
-      href="student/images/iith-logo-og.png"
-      type="image/x-icon"
-    />
-  </head>
-  <body>
-    <!-- app-header -->
-
-    <div class="app-header">
-      <a href="https://www.iith.ac.in/">
-        <div class="college-container">
-          <img src="./student/images/iith-logo-removebg-preview.png" alt="" />
-
-          <p id="college-name">
-            Indian Institute<br />of Technology<br />Hyderabad
-          </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mess Registration</title>
+  <link rel="stylesheet" href="frontpage/page.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Left Section -->
+    <div class="left-panel">
+      <!-- Top White Header Bar -->
+      <div class="header-bar">
+        <img src="frontpage/images/iith-logo-removebg-preview.png" alt="IITH Logo" class="header-logo" />
+        <div class="header-text">
+          <div class="title">Indian Institute of Technology Hyderabad</div>
+          <div class="subtitle">Mess Registration</div>
         </div>
-      </a>
-
-      <div class="vertical-rule"></div>
-      <p id="app-header">Mess Registration</p>
-
-      <div class="mess-photo">
-        <img src="./student/images/mess-photo-3.png" alt="" />
       </div>
+
+      <!-- Background Image -->
+      <img src="frontpage/images/messiith.jpg" alt="Mess Image" class="background-image" />
     </div>
 
-    <!-- app-header -->
-
-    <div class="student-auth-container">
-      <div class="header-container">
-        <h2>Student Login</h2>
+    <!-- Right Section -->
+    <div class="right-panel">
+      <div class="login-box">
+        <h1>Login</h1>
+        <div class="button-group">
+          <a href="admin/login.html" class="role-button">Admin</a>
+          <a href="index.html" class="role-button">Student</a>
+        </div>
       </div>
-      <div class="form-container">
-        <form id="student-login-form">
-          <input
-            type="email"
-            id="email"
-            placeholder="Email (@iith.ac.in)"
-            required
-          />
-
-          <input
-            type="password"
-            id="password"
-            placeholder="Password"
-            required
-          />
-
-          <button type="submit">Login</button>
-        </form>
-      </div>
-      <div class="signup-container">Create Account</div>
     </div>
-
-    <!-- javascript -->
-    <script src="./script/login-backend.js"></script>
-  </body>
+  </div>
+</body>
 </html>
