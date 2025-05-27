@@ -1,30 +1,40 @@
-/* admin.js  –  single authoritative version */
-<script src="../config.js"></script>
+/* admin.js – authoritative version (frontend/admin/script/admin.js) */
 
 console.log("admin.js loaded");
-
-//const API_BASE =
-  //window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-    //? "http://127.0.0.1:5050"    // 👈 exact host + port where Flask runs
-    //: "https://mess-registration-api.fly.dev";   // <- prod URL
+console.log("API_BASE →", typeof API_BASE, API_BASE);   // should log the backend URL
 
 const tbody    = document.querySelector("#registrations-table tbody");
 const noDataEl = document.getElementById("no-data");
 
+/* ────────────────────────────────────────────────────────────
+   Load registrations and render table
+────────────────────────────────────────────────────────────── */
 async function loadRegistrations() {
   try {
+    console.log("Fetching from →", `${API_BASE}/api/registrations`);
+
     const res = await fetch(`${API_BASE}/api/registrations`, {
       credentials: "include"
     });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    /* sanity-check: make sure we really got JSON */
+    const contentType = res.headers.get("content-type") || "";
+    if (!res.ok || !contentType.includes("application/json")) {
+      const text = await res.text();              // grab the HTML/error string
+      console.error("Received non-JSON:", text);
+      throw new Error(`Expected JSON, got: ${contentType} (HTTP ${res.status})`);
+    }
+
     const list = await res.json();
     console.log("registrations →", list);
 
+    /* empty list → show “No data” banner */
     if (!Array.isArray(list) || list.length === 0) {
       noDataEl.style.display = "block";
       return;
     }
 
+    /* build rows */
     list.forEach(rec => {
       const tr = document.createElement("tr");
       tr.innerHTML = `
@@ -42,15 +52,18 @@ async function loadRegistrations() {
   }
 }
 
+/* ────────────────────────────────────────────────────────────
+   Utility: Download table as CSV
+────────────────────────────────────────────────────────────── */
 function downloadCSV() {
   const rows = [["Email", "Mess", "Plan", "Registered On"]];
   tbody.querySelectorAll("tr").forEach(tr => {
     rows.push(Array.from(tr.children).map(td => `"${td.textContent.trim()}"`));
   });
-  const csv = rows.map(r => r.join(",")).join("\n");
+  const csv  = rows.map(r => r.join(",")).join("\n");
   const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
   const url  = URL.createObjectURL(blob);
-  const a = Object.assign(document.createElement("a"), {
+  const a    = Object.assign(document.createElement("a"), {
     href: url,
     download: "Registrations.csv"
   });
@@ -60,20 +73,18 @@ function downloadCSV() {
   URL.revokeObjectURL(url);
 }
 
+/* ────────────────────────────────────────────────────────────
+   Event bindings
+────────────────────────────────────────────────────────────── */
 document.getElementById("download-report")?.addEventListener("click", downloadCSV);
+
 document.getElementById("change-plans")?.addEventListener("click", () => {
-  // load relative page, not absolute
-  window.location.href = "change-plans.html";
+  window.location.href = "./change-plans.html";      // stay within /admin/
 });
 
 document.getElementById("logout-btn")?.addEventListener("click", () => {
   window.location.href = "/logout";
 });
 
+/* kick-off */
 document.addEventListener("DOMContentLoaded", loadRegistrations);
-/* admin.js … keep everything else the same */
-document.getElementById("change-plans")?.addEventListener("click", () => {
-  // “./” forces a link that is relative to /admin/
-  window.location.href = "./change-plans.html";
-});
-
