@@ -1,0 +1,107 @@
+[
+  {
+    "email": "nathanalvares2706@gmail.com",
+    "mess": "Mess B",
+    "plan": "Monthly",
+    "timestamp": "22-05-2025 21:46:40",
+    "status": "registered"
+  },
+  {
+    "email": "nathanalvares2706@gmail.com",
+    "mess": "Mess A",
+    "plan": "Monthly",
+    "timestamp": "22-05-2025 21:46:53",
+    "status": "registered"
+  },
+  {
+    "email": "nathanalvares2706@gmail.com",
+    "mess": "Mess A",
+    "plan": "Weekly",
+    "timestamp": "22-05-2025 21:47:01",
+    "status": "registered"
+  },
+  {
+    "email": "nathanalvares2706@gmail.com",
+    "mess": "Mess A",
+    "plan": "Monthly",
+    "timestamp": "22-05-2025 21:47:07",
+    "status": "registered"
+  },
+  {
+    "email": "nathanalvares2706@gmail.com",
+    "mess": "Mess B",
+    "plan": "Monthly",
+    "timestamp": "22-05-2025 21:47:17",
+    "status": "registered"
+  },
+  {
+    "email": "nathanalvares2706@gmail.com",
+    "mess": "Mess B",
+    "plan": "Monthly",
+    "timestamp": "22-05-2025 22:53:26",
+    "status": "registered"
+  },
+  {
+    "email": "nathanalvares2706@gmail.com",
+    "mess": "Mess B",
+    "plan": "Monthly",
+    "timestamp": "22-05-2025 22:54:44",
+    "status": "registered"
+  },
+  {
+    "email": "nathanalvares2706@gmail.com",
+    "mess": "Mess B",
+    "plan": "Monthly",
+    "timestamp": "22-05-2025 22:56:21",
+    "status": "registered"
+  },
+  {
+    "email": "nathanalvares2706@gmail.com",
+    "mess": "Mess B",
+    "plan": "Monthly",
+    "timestamp": "22-05-2025 22:56:40",
+    "status": "registered"
+  },
+  {
+    "email": "nathanalvares2706@gmail.com",
+    "mess": "Mess B",
+    "plan": "Monthly",
+    "timestamp": "22-05-2025 22:59:40",
+    "status": "registered"
+  },
+  {
+    "email": "nathanalvares2706@gmail.com",
+    "mess": "Mess A",
+    "plan": "Monthly",
+    "timestamp": "22-05-2025 22:59:52",
+    "status": "registered"
+  },
+  {
+    "email": "nathanalvares2706@gmail.com",
+    "mess": "Mess B",
+    "plan": "Monthly",
+    "timestamp": "22-05-2025 23:00:56",
+    "status": "registered"
+  },
+  {
+    "email": "nathanalvares2706@gmail.com",
+    "mess": "Mess B",
+    "plan": "Monthly",
+    "timestamp": "22-05-2025 23:10:01",
+    "status": "registered"
+  },
+  {
+    "email": "nathanalvares2706@gmail.com",
+    "mess": "-",
+    "plan": "-",
+    "timestamp": "22-05-2025 23:10:10",
+    "status": "unregistered"
+  },
+  {
+    "email": "nathanalvares2706@gmail.com",
+    "mess": "Mess A",
+    "plan": "Weekly",
+    "timestamp": "22-05-2025 23:10:17",
+    "status": "registered"
+  }
+]
